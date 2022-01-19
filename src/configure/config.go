@@ -102,10 +102,6 @@ type Config struct {
 		Direct   bool   `mapstructure:"direct" json:"direct"`
 	} `mapstructure:"mongo" json:"mongo"`
 
-	RMQ struct {
-		URI string `mapstructure:"uri" json:"uri"`
-	} `mapstructure:"rmq" json:"rmq"`
-
 	Redis struct {
 		Username   string   `mapstructure:"username" json:"username"`
 		Password   string   `mapstructure:"password" json:"password"`

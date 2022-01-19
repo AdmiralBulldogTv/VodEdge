@@ -81,7 +81,7 @@ func New(gCtx global.Context) <-chan struct{} {
 		_, _ = b.WriteString("#EXTM3U\n")
 
 		for _, v := range readyVariants {
-			_, _ = b.WriteString(fmt.Sprintf("#EXT-X-STREAM-INF:BANDWIDTH=%d,AVERAGE-BANDWIDTH=%d,RESOLUTION=%dx%d,FRAME-RATE=%d,CODECS=\"avc1.42e00a,mp4a.40.2\"\n", v.Bitrate, v.Bitrate, v.Width, v.Height, v.FPS))
+			_, _ = b.WriteString(fmt.Sprintf("#EXT-X-STREAM-INF:BANDWIDTH=%d,AVERAGE-BANDWIDTH=%d,RESOLUTION=%dx%d,FRAME-RATE=%d,CODECS=\"avc1.42e00a,mp4a.40.2\",NAME=\"%s\"\n", v.Bitrate, v.Bitrate, v.Width, v.Height, v.FPS, v.Name))
 			_, _ = b.WriteString(fmt.Sprintf("%s/playlist.m3u8\n", v.Name))
 		}
 

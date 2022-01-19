@@ -54,6 +54,5 @@ require (
 
 require (
 	github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0 // indirect
-	github.com/streadway/amqp v1.0.0
 	go.mongodb.org/mongo-driver v1.8.2
 )
